@@ -1,12 +1,15 @@
 {
     "name": "millsoft/aceproject",
-    "description": "PHP Library for Aceproject API.",
+    "description": "PHP Library for AceProject API.",
     "keywords": ["aceproject", "api", "taskmanagerv"],
     "license": "CC-BY-1.0",
+    "homepage": "https://github.com/millsoft/aceproject",
     "authors": [
         {
             "name": "Michael Milawski",
-            "email": "mm@millsoft.de"
+            "email": "mm@millsoft.de",
+            "homepage": "http://www.millsoft.de",
+            "role": "Developer"
         }
     ],
     "type": "library",
