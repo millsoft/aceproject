@@ -1,0 +1,27 @@
+{
+    "name": "millsoft/aceproject",
+    "description": "PHP Library for Aceproject API.",
+    "keywords": ["aceproject", "api", "taskmanagerv"],
+    "license": "CC-BY-1.0",
+    "authors": [
+        {
+            "name": "Michael Milawski",
+            "email": "mm@millsoft.de"
+        }
+    ],
+    "type": "library",
+    "require": {
+		"php": ">=5.4",
+        "nategood/httpful": "^0.2.20"
+    },
+	"require-dev": {
+		"phpunit/phpunit": "5.2.*",
+        "paquettg/php-html-parser": "^1.7"
+    },
+	"autoload": {
+        "psr-4": {
+            "Millsoft\\AceProject\\": ["src/", "src/api/"],
+            "Millsoft\\Tools\\": ["src/tools/"]
+        }
+    }
+}

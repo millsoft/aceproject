@@ -1,0 +1,80 @@
+// http://api.aceproject.com/explorer/?fct=getgeneralstats
+public static function GetGeneralStats ($params = array()){
+
+$default_params = array(
+	'fct'	=>	"getgeneralstats",
+	'projectidfilter'	=>	NULL,
+);
+
+$params = array_merge( $default_params, $params );
+return self::sendRequestAndGetObject( $params );
+
+}
+
+// http://api.aceproject.com/explorer/?fct=gettaskgroupsstats
+public static function GetTaskGroupsStats ($params = array()){
+
+$default_params = array(
+	'fct'	=>	"gettaskgroupsstats",
+	'projectidfilter'	=>	0,
+);
+
+$params = array_merge( $default_params, $params );
+return self::sendRequestAndGetObject( $params );
+
+}
+
+// http://api.aceproject.com/explorer/?fct=gettaskprioritiesstats
+public static function GetTaskPrioritiesStats ($params = array()){
+
+$default_params = array(
+	'fct'	=>	"gettaskprioritiesstats",
+	'projectidfilter'	=>	0,
+);
+
+$params = array_merge( $default_params, $params );
+return self::sendRequestAndGetObject( $params );
+
+}
+
+// http://api.aceproject.com/explorer/?fct=gettaskstatusesstats
+public static function GetTaskStatusesStats ($params = array()){
+
+$default_params = array(
+	'fct'	=>	"gettaskstatusesstats",
+	'projectidfilter'	=>	0,
+);
+
+$params = array_merge( $default_params, $params );
+return self::sendRequestAndGetObject( $params );
+
+}
+
+// http://api.aceproject.com/explorer/?fct=gettasktypesstats
+public static function GetTaskTypesStats ($params = array()){
+
+$default_params = array(
+	'fct'	=>	"gettasktypesstats",
+	'projectidfilter'	=>	0,
+);
+
+$params = array_merge( $default_params, $params );
+return self::sendRequestAndGetObject( $params );
+
+}
+
+// http://api.aceproject.com/explorer/?fct=getusersstats
+public static function GetUsersStats ($params = array()){
+
+$default_params = array(
+	'fct'	=>	"getusersstats",
+	'projectidfilter'	=>	NULL,
+	'filteractive'	=>	NULL,
+	'sortorder'	=>	NULL,
+);
+
+$params = array_merge( $default_params, $params );
+return self::sendRequestAndGetObject( $params );
+
+}
+

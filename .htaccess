@@ -1,0 +1,7 @@
+#PROTECTION for the aceproject guid file so it can't be called in the browser:
+
+<Files ~ "^.*\.(aceproject_).*">
+order allow,deny
+deny from all
+satisfy all
+</Files>
