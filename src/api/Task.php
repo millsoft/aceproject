@@ -127,7 +127,7 @@ class Task extends AceProject
 
         $params = array_merge($default_params, $params);
 
-        return self::sendRequestAndGetObject($params);
+        return self::sendRequest($params);
 
     }
 
@@ -630,12 +630,10 @@ class Task extends AceProject
     public static function ResetTaskPriorityOrder($project_id = 0)
     {
 
-        $default_params = array(
+	    $params = array(
             'fct'       => "resettaskpriorityorder",
             'projectid' => $project_id,
         );
-
-        $params = array_merge($default_params, $params);
 
         return self::sendRequestAndGetObject($params);
 
@@ -764,7 +762,7 @@ class Task extends AceProject
 
         $params = array_merge($default_params, $params);
 
-        return self::sendRequestAndGetObject($params);
+        return self::sendRequest($params);
 
     }
 
@@ -991,7 +989,7 @@ class Task extends AceProject
 
         $params = array_merge($default_params, $params);
 
-        return self::sendRequestAndGetObject($params);
+        return self::sendRequest($params);
 
     }
 
@@ -1070,7 +1068,7 @@ class Task extends AceProject
 
         $params = array_merge($default_params, $params);
 
-        return self::sendRequestAndGetObject($params);
+        return self::sendRequest($params);
 
     }
 

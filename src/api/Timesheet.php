@@ -147,7 +147,7 @@ class Timesheet extends AceProject {
 
 		$params = array_merge( $default_params, $params );
 
-		return self::sendRequestAndGetObject( $params );
+		return self::sendRequest( $params );
 
 	}
 
@@ -167,7 +167,7 @@ class Timesheet extends AceProject {
 
 		$params = array_merge( $default_params, $params );
 
-		return self::sendRequestAndGetObject( $params );
+		return self::sendRequest( $params );
 
 	}
 
@@ -188,7 +188,7 @@ class Timesheet extends AceProject {
 
 		$params = array_merge( $default_params, $params );
 
-		return self::sendRequestAndGetObject( $params );
+		return self::sendRequest( $params );
 
 	}
 
