@@ -46,9 +46,13 @@ class AceProject {
         $own_guid_file = self::$GUIDfile . "_" . self::$subdomain;
 
 		if ( file_exists( $own_guid_file )  ) {
-			self::$GUID = file_get_contents( $own_guid_file );
-
-			return self::$GUID;
+		    if(filemtime($own_guid_file) < (time()-259200)){
+                unlink($own_guid_file);
+            }
+            else {
+                self::$GUID = file_get_contents($own_guid_file);
+                return self::$GUID;
+            }
 		}
 
 		$subdomain = self::$subdomain;
