@@ -1,9 +1,10 @@
 {
     "name": "millsoft/aceproject",
     "description": "PHP Library for AceProject API.",
-    "keywords": ["aceproject", "api", "taskmanagerv"],
+    "keywords": ["aceproject", "api", "taskmanager"],
     "license": "CC-BY-1.0",
     "homepage": "https://github.com/millsoft/aceproject",
+    "version" : "0.12",
     "authors": [
         {
             "name": "Michael Milawski",

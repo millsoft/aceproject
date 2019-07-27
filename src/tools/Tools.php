@@ -10,7 +10,11 @@ use PHPHtmlParser\Dom;
 
 
 class Tools {
-    public static $out_file = __DIR__ . "/out.txt";
+    public static $out_file = null;
+
+    public static function init(){
+        self::$out_file = __DIR__ . "/out.txt";
+    }
 
     public static function extractParamsFromFile( $file = 'params.txt' ) {
         $params_file = __DIR__ . "/" . $file;
@@ -38,7 +42,7 @@ class Tools {
             $new[] = "'" . $match[1] . "' => " . $match[3];
         }
 
-        $str = join( ",\n", $new );
+        $str = implode( ",\n", $new );
 
         echo $str;
 
@@ -177,6 +181,7 @@ preg_match_all($re, $str, $matches, PREG_SET_ORDER, 0);
 
 
 //create new out file:
+Tools::init();
 file_put_contents(Tools::$out_file, "");
 
 foreach($matches as $match){

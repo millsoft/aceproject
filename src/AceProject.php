@@ -13,9 +13,8 @@ class AceProject {
 	/**  @var string $m_SampleProperty define here what this variable is for, do this for every instance variable */
 	protected $isLoggedIn = false;
 	private static $GUID = null;
-	private static $GUIDfile = __DIR__ . '/../.aceproject';
 
-	private static $apiUrl = "http://api.aceproject.com";
+	private static $apiUrl = "https://api.aceproject.com";
 	public static $lastError = null;
 
 	public static $subdomain = '';
@@ -43,7 +42,8 @@ class AceProject {
 		//Try to read the GUID from file
 		//This will save us one API call
 
-        $own_guid_file = self::$GUIDfile . "_" . self::$subdomain;
+        $GUIDfile = __DIR__ . '/../.aceproject';
+        $own_guid_file = $GUIDfile . "_" . self::$subdomain;
 
 		if ( file_exists( $own_guid_file )  ) {
 		    if(filemtime($own_guid_file) < (time()-259200)){
