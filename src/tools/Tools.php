@@ -51,6 +51,7 @@ class Tools {
     public static function importByUrl( $url ) {
 
         $response = \Httpful\Request::get( $url )
+            ->addHeader('User-Agent', 'millsoft/aceproject')
             ->send();
         $response = str_ireplace( "&amp", "&", $response );
 

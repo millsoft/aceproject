@@ -63,6 +63,7 @@ class AceProject {
 
 
         $response = \Httpful\Request::get( $url )
+		                            ->addHeader('User-Agent', 'millsoft/aceproject')
 		                            ->expectsJson()
 		                            ->send();
 
@@ -130,6 +131,7 @@ class AceProject {
 		$url = self::$apiUrl . "/?" . $_p;
 
 		$response = \Httpful\Request::$method( $url )
+		                            ->addHeader('User-Agent', 'millsoft/aceproject')
 		                            ->expectsJson()
 		                            ->send();
 
@@ -218,6 +220,7 @@ class AceProject {
 		);
 
 		$request = \Httpful\Request::post( $upload_url );
+		$request->addHeader('User-Agent', 'millsoft/aceproject');
 		$request->body( $params );
 		$request->attach( $payload );
 

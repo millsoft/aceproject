@@ -4,7 +4,7 @@
     "keywords": ["aceproject", "api", "taskmanager"],
     "license": "CC-BY-1.0",
     "homepage": "https://github.com/millsoft/aceproject",
-    "version" : "0.12",
+    "version" : "0.13",
     "authors": [
         {
             "name": "Michael Milawski",
